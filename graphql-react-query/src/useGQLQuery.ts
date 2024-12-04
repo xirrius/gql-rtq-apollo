@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query"; 
-import { GraphQLClient, request } from "graphql-request";
+import { GraphQLClient } from "graphql-request";
 
-export const useGQLQuery = (key, query, variables, config = {}) => {
+export const useGQLQuery = (key:string, query, variables:object, config = {}) => {
     const endpoint = 'https://countries.trevorblades.com/'
     const headers = {
         headers: {
@@ -15,7 +15,8 @@ export const useGQLQuery = (key, query, variables, config = {}) => {
     // const fetchData = async () => await request(endpoint, query, variables)
 
     return useQuery({
-      queryKey: ["posts"],
+      queryKey: [key],
       queryFn: fetchData,
+      ...config
     });
 }

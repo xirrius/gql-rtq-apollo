@@ -2,6 +2,7 @@ import { useMutation } from "@apollo/client";
 import { CREATE_PRODUCT } from "../queries";
 
 const Search = () => {
+  
   const [createProduct, { data, loading, error }] = useMutation(
     CREATE_PRODUCT,
     {

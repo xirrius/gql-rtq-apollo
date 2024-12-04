@@ -13,3 +13,6 @@ createRoot(document.getElementById("root")!).render(
     </QueryClientProvider>
   </StrictMode>
 );
+
+// query - GET
+// mutate - put post patch delete

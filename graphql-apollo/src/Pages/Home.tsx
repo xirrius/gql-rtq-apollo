@@ -3,8 +3,10 @@ import { GET_ALL_CHARACTERS } from "../queries";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   const { data, loading, error } = useQuery(GET_ALL_CHARACTERS);
+  console.log(data);
+
   if (loading) return <p>Loading...</p>;
   if (error) return <p> Error: {error.message || "Something went wrong!"}</p>;
 
@@ -28,4 +30,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;

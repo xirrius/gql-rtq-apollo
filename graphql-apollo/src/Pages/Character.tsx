@@ -35,4 +35,5 @@ const Character = () => {
     </div>
   );
 };
+
 export default Character;

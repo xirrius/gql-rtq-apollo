@@ -52,7 +52,7 @@ export const SEARCH_CHARACTERS = gql`
 `;
 
 export const CREATE_PRODUCT = gql`
-  query CreateProduct($name: String!, $quantityPerUnit: Int!) {
+  mutation abc($name: String!, $quantityPerUnit: Int!) {
     createProduct(record: { name: $name, quantityPerUnit: $quantityPerUnit }) {
       record {
         name
@@ -60,3 +60,10 @@ export const CREATE_PRODUCT = gql`
     }
   }
 `;
+
+// product {
+//   record {
+//     name
+//     quantityPerUnit
+//   }
+// }
